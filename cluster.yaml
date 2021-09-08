@@ -1,0 +1,20 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: jis-cluster
+  region: us-east-2
+vpc:
+  subnets:
+    public:
+       us-east-2b: { id: subnet-01c62fe22f47c3b86 }
+       us-east-2a: { id: subnet-09e3e5ae67861f25e }
+       us-east-2c: { id: subnet-0f39f1f183926755f }
+
+nodeGroups:
+  - name: ng-1
+    instanceType: t2.small
+    desiredCapacity: 2
+    volumeSize: 80
+    ssh:
+      allow: true
