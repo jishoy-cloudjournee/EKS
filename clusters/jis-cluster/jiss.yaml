@@ -9,4 +9,8 @@ spec:
   ref:
     branch: main
   url: https://github.com/jishoy-cloudjournee/EKS.git
-
+  ignore: |
+   .git/
+   .github/
+   .sops.yaml
+   .gitlab-ci.yml
